@@ -1,4 +1,6 @@
 class Solution:
+    ## The problem of this approach is: when old_color and new_color is the same, it will fall 
+    # into infinite loop !!
     def floodFill(self, image: list[list[int]], sr: int, sc: int, color: int) -> list[list[int]]:
         def flood(image: list[list[int]], sr: int, sc: int, new_color: int, old_color):
             r_cnt, c_cnt = len(image), len(image[0])
@@ -23,6 +25,7 @@ class Solution:
         def flood(image: list[list[int]], sr: int, sc: int):
             r_cnt, c_cnt = len(image), len(image[0])
 
+            # Avoid infinite loop if the new and old colors (image[sr][sc] == new_color) are the same...
             if sr < 0 or sr >= r_cnt or sc < 0 or sc >= c_cnt or image[sr][sc] == new_color:
                 return 
 

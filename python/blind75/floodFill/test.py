@@ -10,5 +10,9 @@ class TestSum(unittest.TestCase):
         print(res)
         self.assertEqual(res, [[2,2,2],[2,2,0],[2,0,1]])
 
+        res = sol.floodFill(image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0)
+        print(res)
+        self.assertEqual(res, [[0,0,0],[0,0,0]])
+
 if __name__ == '__main__':
     unittest.main()

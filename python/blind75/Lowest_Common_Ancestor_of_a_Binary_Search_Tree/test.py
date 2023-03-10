@@ -4,8 +4,7 @@ import unittest
 class TestSum(unittest.TestCase):
 
     def build_test_tree1(self, vals):
-        
-        for v in vals 
+        return 
 
     def test_flood_case1(self):
         sol = Solution()
